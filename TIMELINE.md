@@ -17,7 +17,7 @@ The spools are attached to eachother by inserting Spool 2 into Spool 1. For bett
 ![Image of a constructed spool](images/Drum_Cons.png)
 
 
-The spool 1 has a cavity for holding a Neodimium magnet for the working of Hall sensor which is specified later.
+The spool 1 has a cavity for holding a Neodymium magnet for the working of Hall sensor which is specified later.
 Simillarly spool 2 has a cavity for the Stepper motor's shaft to rotate the spool also specified later.
 
 ![Image of a constructed spool's lateral section](images/Drum_Cons_Lateral.png)

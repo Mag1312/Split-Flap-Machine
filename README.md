@@ -10,7 +10,7 @@ The parts of the SFM are as follows -
 4. Hall sensor
 5. Stepper module
 6. Nano controller
-7. Neodimium magnets
+7. Neodymium magnets
 
 #
 
