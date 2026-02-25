@@ -8,6 +8,7 @@ Week 1
 Created the flaps (Self Explanatory)
 Created the Spools (The drums where the flaps are placed for SFM to rotate)
  - The spool has been divided into 2 parts, The part 1 (The top part) and part 2 (The bottom part) [look at the image for better understanding]
+
 ![Spools](images/Drum_Seperate.png)
 
 Both the spools have 40 holes, having diameter greater than that of flap ends. The angle between the centres of two circles and the centre of the base of the spool is 9 degrees.
@@ -23,5 +24,6 @@ Simillarly spool 2 has a cavity for the Stepper motor's shaft to rotate the spoo
 ![Image of a constructed spool's lateral section](images/Drum_Cons_Lateral.png)
 
 The semi constructed spool with flap is given below, for complexity and space constraints only one flap has been attached.
+
 ![Image of a constructed spool with a flap attached](images/Drum_w_Flaps.png)
 
