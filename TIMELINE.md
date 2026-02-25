@@ -25,5 +25,5 @@ Simillarly spool 2 has a cavity for the Stepper motor's shaft to rotate the spoo
 
 The semi constructed spool with flap is given below, for complexity and space constraints only one flap has been attached.
 
-![Image of a constructed spool with a flap attached](images/Drum_w_Flaps.png)
+![Image of a constructed spool with a flap attached](images/Drums_w_Flaps.png)
 

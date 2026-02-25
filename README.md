@@ -1,7 +1,7 @@
 # Split-Flap-Machine
 This is a project focusing on making a 7 letter split flap machine, Primarily a clock with additional features like displaying words (having 7 or less letters) and simple animations.
 
-For detailed understanding please refer to !(TIMELINE.md)
+For detailed understanding please refer to TIMELINE.md
 
 The parts of the SFM are as follows - 
 1. Flaps
