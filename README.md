@@ -21,7 +21,7 @@ The spool consists of a cavity to insert the shaft of stepper motor and another 
 
 Each flap is placed at an interval of 9 degrees with the centre of the base of the spool.
 The lateral section of the spool is given below
-![An image of a lateral image of a spool](images/Drum_Cons_lateral.png)
+![An image of a lateral image of a spool](images/Drum_Cons_Lateral.png)
 
 #
 
