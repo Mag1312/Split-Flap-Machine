@@ -41,3 +41,12 @@ And we got some changes, Since The older spool design with 40 holder was TOO EXP
 
 Here you can see the spool stand attacher, ensuring that it can rotate freely without disorientating.
 
+Welp, its 2am and I've made some changes. 
+The spool stand attacher will work however for smooth rotation I have decided to use ball bearings of 3x8x4mm. I had to do multiple revisions and changes for the somewhat final SFM unit.
+firstly I added a cavity for ball bearing as mentioned. Next I made the height of the SFM unit around 8.5cm and also had to add an offset slab which stops the top flap from falling down unless turned 10 degress. (See the image)
+and next I updated the overall look of the Stand it looks more boxier and it was the design I was going for.
+
+![1.5 hrs of work](images/Full_SFM.png)
+
+![another one](images/Full_SFM_F.png)
+
