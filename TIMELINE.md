@@ -37,7 +37,7 @@ Created a Spool stand. SPECIFICALLY designed for when the flaps of the spool hit
 
 And we got some changes, Since The older spool design with 40 holder was TOO EXPENSIVE (The cost adds up for 7 of them, so its 280 if its 40 holders) so I reduced it to only 36. 26 for letters and 10 for numbers from 0-9.
 
-![Image of updated spool V1](images/Drum_P1_E1)
+![Image of updated spool V1](images/Drum_P1_E1.png)
 
 Here you can see the spool stand attacher, ensuring that it can rotate freely without disorientating.
 
