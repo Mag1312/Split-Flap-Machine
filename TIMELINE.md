@@ -50,3 +50,12 @@ and next I updated the overall look of the Stand it looks more boxier and it was
 
 ![another one](images/Full_SFM_F.png)
 
+(D3)
+
+As soon as I woke up I made a cavity in the Spool Holder for a screw so that when the flaps fall they make the sound which we want to hear and also makes the flaps not swing after falling down (This is the major cause).
+
+![Spool Stand Screw Cavity](images/Stand_Scr.png)
+
+Next Since the design was nearly final I made a BOM list although I Have not decided yet how to power this so I have not included any power supply or things which are used to power this (I have to Research). And the total cost of the machine comes to nearly 97$, A whole lot of expensive, Major cost includes 3d printing service, filament and Arduino Nano. Well 3d printing in my local is much cheaper than online service which is charging, 110$ JUST FOR THE FLAPS OF 7 UNITS! In the price of flaps I can print my whole machine locally, However I doubt blueprint will give me funds to convert credit into real money so I can pay the local service so I doubt it.
+
+![BOM](images/BOM_1.png)
