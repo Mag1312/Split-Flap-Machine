@@ -59,3 +59,9 @@ As soon as I woke up I made a cavity in the Spool Holder for a screw so that whe
 Next Since the design was nearly final I made a BOM list although I Have not decided yet how to power this so I have not included any power supply or things which are used to power this (I have to Research). And the total cost of the machine comes to nearly 97$, A whole lot of expensive, Major cost includes 3d printing service, filament and Arduino Nano. Well 3d printing in my local is much cheaper than online service which is charging, 110$ JUST FOR THE FLAPS OF 7 UNITS! In the price of flaps I can print my whole machine locally, However I doubt blueprint will give me funds to convert credit into real money so I can pay the local service so I doubt it.
 
 ![BOM](images/BOM_1.png)
+
+(D4)
+
+This day was brainfoggy one, I had no idea how to code the script and I had to go through multiple videos of how arduino's control stepper motors, haul sensor and in basic the whole setup (the code is same for arduino and esp32). Even after all this, I was still not able to find what to do so I asked chatGPT and it asked me to follow a path. I had the map and was on my own, testing logics and all. I worked on calibration today, What it does is that everytime the SFM starts up, it doesnt know which letter it is displaying so in the calibration it slowly rotates the spool and uses the hall sensor to detect the magnet, when the magnet is in close contact to the hall sensor the hall sensor reads LOW and vice versa. So this calibration is only right when the hall sensor first reads HIGH then LOW then HIGH and the point where hall sensor transitions from LOW to HIGH is the point of 0 position and all characters are labelled relative to this position.
+
+![code of calibration](images/calib_code.png)
