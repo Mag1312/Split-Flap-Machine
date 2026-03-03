@@ -65,3 +65,11 @@ Next Since the design was nearly final I made a BOM list although I Have not dec
 This day was brainfoggy one, I had no idea how to code the script and I had to go through multiple videos of how arduino's control stepper motors, haul sensor and in basic the whole setup (the code is same for arduino and esp32). Even after all this, I was still not able to find what to do so I asked chatGPT and it asked me to follow a path. I had the map and was on my own, testing logics and all. I worked on calibration today, What it does is that everytime the SFM starts up, it doesnt know which letter it is displaying so in the calibration it slowly rotates the spool and uses the hall sensor to detect the magnet, when the magnet is in close contact to the hall sensor the hall sensor reads LOW and vice versa. So this calibration is only right when the hall sensor first reads HIGH then LOW then HIGH and the point where hall sensor transitions from LOW to HIGH is the point of 0 position and all characters are labelled relative to this position.
 
 ![code of calibration](images/calib_code.png)
+
+(D6)
+
+Today I made a code to fetch time from the internet (watch this video for info : https://youtu.be/9OcewS8sa68?si=-juCJv46duffQA7_). And I also updated the BOM list because with only 1 esp 32, I would be falling short of gpio pins for the motors and other features, So I had two options either use a gpio extension board or buy another esp 32. After painfully reading the advantages and disadvantages of both, it was quite clear that another esp 32 is the best option so I did  so!
+
+![code of getTime function](gettime.png)
+
+![BOM LIST 2](BOM_2.png)

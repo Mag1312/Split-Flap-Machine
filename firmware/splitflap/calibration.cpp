@@ -1,27 +1,18 @@
 #include <stepper.h>
+#include <Arduino.h>
 
 int steps_per_rev = 4096;
 Stepper s1(steps_per_rev, 16, 18, 17, 19);
 int h1 = 4, pos;
 
-void setup()
+void calibration()
 {
- // put your setup code here, to run once:
+
  Serial.begin(115200);
  pinMode(h1,INPUT_PULLUP);
  s1.setSpeed(10);
- calibration();
 
-}
 
-void stepperForward()
-{
-  //rotates stepper by 6th of a degree
-  s1.step(1);
-}
-
-void calibration()
-{
   // code for calibration.
   int safetyCount = 0;
 
@@ -73,10 +64,4 @@ void calibration()
     s1.setSpeed(10);
     pos = 0;
   }
-}
-
-void loop()
-{
-  // put your main code here, to run repeatedly:
-
 }
