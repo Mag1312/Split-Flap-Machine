@@ -65,3 +65,8 @@ void calibration()
     pos = 0;
   }
 }
+
+void setupCalibration()
+{
+ 
+}

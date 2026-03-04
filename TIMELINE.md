@@ -73,3 +73,17 @@ Today I made a code to fetch time from the internet (watch this video for info :
 ![code of getTime function](gettime.png)
 
 ![BOM LIST 2](BOM_2.png)
+
+(D7)
+
+In todays episode of Split Flap Device, I made a code for all the 7 units of the device to calibrate at once!
+
+This is achieved by calling the setupCalibration() function from the main .ide file. This function then called the fullCalibration() function.
+
+Here's a simple explanation of the full calibration function - First the hall sensors output is detected if it is on the magnet or near its magnetic field, it goes in the first if block, in it one motor is rotated by 1 step and then it is checked if the hall sensors output has changed, if not it goes to the setupCalibration() function and in the loop follows fullCalibration() function again for another stepper motor.
+
+This process might seem lengthy but to the human eye it seems as if all the 7 units are being calibrated at once! The delay between 2 fullCalibration() functions is so small that it is not noticable!
+
+Props to Chatgpt for letting me know this process, It was quite interesting and very understandable and I was able to code without any help of chatGPT using my own skills!
+
+![code of full calibration](full_calib.png)

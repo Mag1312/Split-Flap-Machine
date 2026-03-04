@@ -11,7 +11,7 @@ void UnixConversion();
 
 void setup() 
 {
-  calibration();
+  setupCalibration();
   wifiConnect();
   getTime();
 }
