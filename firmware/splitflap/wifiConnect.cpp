@@ -1,9 +1,7 @@
 #include <Arduino.h>
 #include <WiFi.h>
 #include <WiFiClientSecure.h>
-
-const char* ssid = "Airtel_9440495073";
-const char* password = "air91639";
+#include <variables.h>
 
 WiFiClientSecure client;
 

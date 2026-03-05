@@ -87,3 +87,28 @@ This process might seem lengthy but to the human eye it seems as if all the 7 un
 Props to Chatgpt for letting me know this process, It was quite interesting and very understandable and I was able to code without any help of chatGPT using my own skills!
 
 ![code of full calibration](full_calib.png)
+
+# 
+Week 2
+
+(D8)
+
+This was one of the most productive days.
+
+Today I made a program to display time, date, weather, weekday on my split flap device!
+
+Inshort today was a day of arduino ide, It took a lot of time, approximately 6 hours for all these but it was worth it!
+
+the displaying works on the following principle -
+It first arranges the words to be displayed in a character array and compares it with ascii values, if it matches it goes on an gets a position which is calculated so that only that letters position is sent. Next the motors rotate one by one by 1 step until all of they reach their final position.
+
+This is the basic program and is used in all 4 of my programs. The weather program however uses api to get its data from the internet through esp 32s wifi feature.
+
+Thats it for today, tommorrows plan is to make a webserver for esp32 and make a program so that when a word is entered in the webserver it is displayed on the split flap machine.
+
+![code of display time](display_time.png)
+
+![code of display date](display_day_info.png)
+
+![code of display weather](display_weather.png)
+
