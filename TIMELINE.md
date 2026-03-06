@@ -124,7 +124,7 @@ I also updated the final BOM list for Hackclub's design review and funds allocat
 
 ![code of audio](images/UART.png)
 
-![code of audio2](images/audio.png)
+![code of audio2](images/audio_functions.png)
 
 ![BOM LIST](images/BOM_3.png)
 
