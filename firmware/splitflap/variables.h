@@ -21,7 +21,7 @@ int pos[7], toMove[7], safetyCount[7] = {0, 0, 0, 0, 0, 0, 0};
 int seconds, minutes,hours;
 int steps_per_flap = steps_per_rev/37;
 char hour1, hour2, minute4, minute5;
-int seconds, minutes, hours, days, months, wdays;
+int seconds, minutes, hours, days, months, wdays, years;
 char monthStr, wdayStr;
 char setOfMonths[] = {"JAN", "FEB", "MAR", "MAY", "JUN", "JUL", "AUG, "SEP", "OCT", "NOV", "DEC};
 char setOfWDays[] = {"MON", "TUE", "WED", "THU", "FRI", "SAT", "SUN"};
@@ -30,7 +30,9 @@ char months_array[months.length() + 1];
 int i,j;
 int display[7];
 char weather_array[main.length() + 1];
-
+char wordToBeDisplayed = "";
+char word_Array[7];
+char link;
 
 char ascii[36] = {
 48,49,50,51,52,53,54,55,56,57,58,

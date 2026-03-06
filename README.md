@@ -1,30 +1,21 @@
 # Split-Flap-Machine
-This is a project focusing on making a 7 letter split flap machine, Primarily a clock with additional features like displaying words (having 7 or less letters) and simple animations.
 
-For detailed understanding please refer to TIMELINE.md
+The Split Flap Machine is a 7 unit device which can display time, weather, weekday, date and even words! It can also play your favourite songs achieved by using an MicroSD Card!
 
-The parts of the SFM are as follows - 
-1. Flaps
-2. Spool
-3. Stepper motor
-4. Hall sensor
-5. Stepper module
-6. Nano controller
-7. Neodymium magnets
+The main attraction of this device is the flap system and its synchronous rotation of all flaps at a time. This device can be controlled through its local webserver.
+
+![Image of Web Server](images/Web_Server.png)
 
 #
 
-The main mechanism of SFM consists of a spool being rotated by a stepper motor and controller by microcontroller with the use of hall sensor.
-The spool is attached with the flaps as shown below in the image.
-The spool consists of a cavity to insert the shaft of stepper motor and another cavity to hold neodimium magnets for the working of hall sensor.
+A unit of Split Flap Device looks somewhat like this - 
 
-![A constructed image of spool with a flap](images/Drums_w_Flaps.png)
+![ Image of a unit of SFM](images/Full_SFM_F.png)
 
-Each flap is placed at an interval of 9 degrees with the centre of the base of the spool.
-The lateral section of the spool is given below
-
-![An image of a lateral image of a spool](images/Drum_Cons_Lateral.png)
+A unit consists of a drum, 37 flaps, a stepper motor, a hall sensor and a ball bearing.
 
 #
 
-To be continued
+The total cost of the whole device is around $185
+
+![Image of BOM](images/BOM_3.png)

@@ -35,10 +35,13 @@ void displayWeather()
           if(weather_array[i] == ascii[j])
           {
             display[i] = j;
+            toMove[i] = display[i] * steps_per_flap;
             break;
           }
         }
       }
+      
+
 
       for(int i=0;i<7;i++)
       {

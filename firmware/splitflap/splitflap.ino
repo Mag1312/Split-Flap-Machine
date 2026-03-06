@@ -2,6 +2,9 @@
 #include <time.h>
 #include <WiFiClientSecure.h>
 #include <variables.h>
+#include <WebServer.h>
+
+WebServer server(80);
 
 // Function Prototypes
 void calibration();
@@ -20,6 +23,23 @@ void setup()
   delay(10000);
   displayWeekDay();
   displayTime();
+
+  server.on("/", handleRoot);
+  server.on("/time/now", handleTimeNow);
+  server.on("/info/now", handleInfoNow);
+  server.on("/displayWord", handleDisplayWord);
+  server.on("/play/now", handlePlayNow);
+  server.on("/stop/now", handleStopNow);
+  server.on("/next/now", handleNextNow);
+  server.on("/previous/now", handlePreviousNow);
+
+
+  Serial.println("IP Address: ")
+  Serial.println(WiFi.localIP());
+  server.begin();
+  Serial.println("HTTP server started");
+
+  Serial2.begin(115200, SERIAL_8N1, 16, 17);
 }
 
 void loop()
@@ -38,4 +58,6 @@ void loop()
   {
     dayUpdate = 0;
   }
+  
+  server.handleClient();
 }

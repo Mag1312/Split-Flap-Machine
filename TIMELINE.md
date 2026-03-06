@@ -112,3 +112,21 @@ Thats it for today, tommorrows plan is to make a webserver for esp32 and make a 
 
 ![code of display weather](images/display_weather.png)
 
+(D9)
+
+Today was the day where the software part was completed!
+
+In todays episode of Split Flap Display, I created a webserver having the functionality so that one can control the split flap machine from their phone, It also has song playback feature. This is achieved through UART communication between 2 ESP32s, which uses an MicroSD card to store all the songs. 
+
+This could be updated to a streaming playback in the future, which is a matter of only few code lines.
+
+I also updated the final BOM list for Hackclub's design review and funds allocation.
+
+![code of audio](images/UART.png)
+
+![code of audio2](images/audio.png)
+
+![BOM LIST](images/BOM_3.png)
+
+And Hence today I submit the design review and hopefully it goes clear.
+

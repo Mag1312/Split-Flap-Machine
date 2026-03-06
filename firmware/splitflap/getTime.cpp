@@ -54,6 +54,7 @@ void UnixConversion()
   days = timeInfo->tm_mday;
   months = timeInfo->tm_mon;
   wdays = timeInfo->tm_wday;
+  years = 1900 + (timeInfo->tm_year);
 
   // this converts months to character array
 
