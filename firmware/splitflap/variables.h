@@ -3,19 +3,17 @@
 #define VARIABLES_H
 #include <stepper.h>
 
-int steps_per_rev = 2048;
-Stepper s[7] = { {steps_per_rev, 4, 6, 5, 7},
-{steps_per_rev, 8, 10, 9, 11},
-{steps_per_rev, 12, 14, 13, 15},
-{steps_per_rev, 19, 23, 20, 24},
-{steps_per_rev, 25, 27, 26, 28},
-{steps_per_rev, 29, 31, 30, 32},
-{steps_per_rev, 33, 39, 38,40}};
+int steps_per_rev = 4096;
+int stepPins[7] = {4,6,8,10,12,14,16};
+int dirPins[7] = {5,7,9,11,13,15,17};
+
+int enablePin = 2;
+int sleepPin = 3;
 
 const char* ssid = "SSID";
 const char* password = "PASSWORD";
 
-int hallSensor[7] = {41, 42, 47, 48, 16, 17, 18};
+int hallSensor[7] = {35, 36, 37, 38, 39, 40, 41};
 int splitCalNum[7] = {0, 0, 0, 0, 0, 0, 0}; 
 int pos[7], toMove[7], safetyCount[7] = {0, 0, 0, 0, 0, 0, 0};
 int seconds, minutes,hours;

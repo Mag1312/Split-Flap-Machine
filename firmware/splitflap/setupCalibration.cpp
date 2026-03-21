@@ -9,48 +9,49 @@ void fullCalibration(int pin)
   for(pin; pin <= 6; pin++)
   {
    pinMode(hallSensor[pin], INPUT_PULLUP);
-   s[pin].setSpeed(5);
-  }
 
-  // code for calibration.
+    // code for calibration.
   
-  if(digitalRead(hallSensor[pin]) == LOW )
-  {
-    splitCalNum[pin] = 1;
-    s[pin].step(1);
-    safetyCount[pin]++;
-
-    if(digitalRead(hallSensor[pin]) == HIGH)
-    {
-      splitCalNum[pin] = 2;
-      s[pin].setSpeed(10);
-      pos[pin] = 0; //sets relative position to 0
-    }
-
-    if(safetyCount[pin] >= 2500)
-    {
-      Serial.println("Homing Failed");
-      Serial.println(pin);
-      while(1);
-    }
-  }
-
-  else
-  {
-    s[pin].step(1);
-    safetyCount[pin]++;
-    s[pin].step(1);
-
-    if(digitalRead(hallSensor[pin]) == LOW)
+    if(digitalRead(hallSensor[pin]) == LOW && splitCalNum[pin] != 2)
     {
       splitCalNum[pin] = 1;
+      digitalWrite(stepPins[pin], HIGH); //moves by 1 step
+      delay(10000);
+      digitalWrite(stepPins[pin], LOW)
+      safetyCount[pin]++;
+
+      if(digitalRead(hallSensor[pin]) == HIGH)
+      {
+        splitCalNum[pin] = 2;
+        pos[pin] = 0; //sets relative position to 0
+      }
+
+      if(safetyCount[pin] >= 5000)
+      {
+        Serial.println("Homing Failed");
+        Serial.println(pin);
+        while(1);
+      }
     }
 
-    if(safetyCount[pin] >= 2500)
+    else
     {
-      Serial.println("Homing Failed");
-      Serial.println(pin);
-      while(1);
+      digitalWrite(stepPins[pin], HIGH); //moves by 1 step
+      delay(10000);
+      digitalWrite(stepPins[pin], LOW)
+      safetyCount[pin]++;
+
+      if(digitalRead(hallSensor[pin]) == LOW)
+      {
+        splitCalNum[pin] = 1;
+      }
+
+      if(safetyCount[pin] >= 5000)
+      {
+        Serial.println("Homing Failed");
+        Serial.println(pin);
+        while(1);
+      }
     }
   }
   
@@ -58,6 +59,7 @@ void fullCalibration(int pin)
 
 void setupCalibration()
 {
+ digitalWrite(enablePin, LOW);
  int pin_num;
  for(pin_num = 0; ; pin_num++)
  {
@@ -76,4 +78,5 @@ void setupCalibration()
     return;
   }
  }
+ digitalWrite(enablePin, HIGH);
 }

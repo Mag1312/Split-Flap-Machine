@@ -1,0 +1,4 @@
+(fp_lib_table
+  (version 7)
+  (lib (name "SplitFlapDisplayFootprintsLibrary")(type "KiCad")(uri "${KIPRJMOD}/SplitFlapDisplayFootprintsLibrary.pretty")(options "")(descr ""))
+)

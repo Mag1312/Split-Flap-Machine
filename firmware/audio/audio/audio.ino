@@ -6,9 +6,9 @@
 Audio audio;
 
 #define SD_CS 5
-#define I2S_BCLK 26
-#define I2S_LRC 25
-#define I2S_DOUT 22
+#define I2S_BCLK 6
+#define I2S_LRC 7
+#define I2S_DOUT 8
 
 #define RXD2 16
 #define TXD2 17
@@ -16,6 +16,12 @@ Audio audio;
 #define MAX_SONGS 100
 
 #define VOL_PIN 34
+
+#define POT_PIN 4   // your ADC pin
+
+float smoothed = 0.0;
+float alpha = 0.1;   // smoothing (0.05–0.2 is good)
+  
 
 String songs[MAX_SONGS];
 int songCount = 0;
@@ -76,6 +82,9 @@ void setup() {
   audio.setVolume(15);
 
   const char* path = "/music";
+  
+  analogReadResolution(12);
+
 
   
 }
@@ -84,10 +93,6 @@ void loop() {
   // put your main code here, to run repeatedly:
 
   audio.loop();
-  int potValue = analogRead(VOL_PIN);
-  int volume = map(potValue, 0, 4095, 0, 21);
-
-  audio.setVolume(volume);
 
   if(Serial2.available())
   {
@@ -111,6 +116,15 @@ void loop() {
   }
   }
 
+  int raw = analogRead(POT_PIN);
+  float normalized = raw / 4095.0;
+
+  smoothed = (alpha * normalized) + ((1 - alpha) * smoothed);
+
+  // Convert to 0–21
+  int vol = smoothed * 21;
+
+  audio.setVolume(vol);
   
 
 }

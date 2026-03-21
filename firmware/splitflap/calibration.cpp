@@ -10,7 +10,7 @@ void calibration()
 
  Serial.begin(115200);
  pinMode(h1,INPUT_PULLUP);
- s1.setSpeed(10);
+
 
 
   // code for calibration.
@@ -22,7 +22,6 @@ void calibration()
     while(digitalRead(h1) == LOW && safetyCount < 5000)
     {
       // rotates motor and checks for hall sensor output
-      s1.step(1);
       safetyCount++;
     }
     if(safetyCount >= 5000)
@@ -31,7 +30,6 @@ void calibration()
       while(1);
     }
     safetyCount = 0;
-    s1.setSpeed(10);
     pos = 0; //sets relative position to 0
 
   }
@@ -41,7 +39,6 @@ void calibration()
     // again rotates it until it doesn't detect and sets the position.
     while(digitalRead(h1) == HIGH && safetyCount < 5000)
     {
-      s1.step(1);
       safetyCount++;
     }
     if(safetyCount >= 5000)
@@ -61,7 +58,6 @@ void calibration()
       Serial.println("Homing Failed");
       while(1);
     }
-    s1.setSpeed(10);
     pos = 0;
   }
 }

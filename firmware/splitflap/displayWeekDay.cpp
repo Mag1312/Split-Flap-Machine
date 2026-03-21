@@ -4,6 +4,7 @@
 
 void displayWeekDay()
 {
+  digitalWrite(enablePin, LOW);
 
   // absolute position of letters and numbers with respect to 0 position.
 
@@ -48,7 +49,8 @@ void displayWeekDay()
     {
       if(posIndicator[i]!=1)
       {
-        s[i].step(1);
+        digitalWrite(stepPins[i], HIGH);
+        digitalWrite(stepPins[i], LOW);
         pos[i]++;
         if(pos[i] >= steps_per_rev)
         {
@@ -61,5 +63,6 @@ void displayWeekDay()
       }
     }
   }
+  digitalWrite(enablePin, HIGH);
 
 }

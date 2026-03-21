@@ -54,7 +54,9 @@ void displayDayInfo()
     {
       if(posIndicator[i]!=1)
       {
-        s[i].step(1);
+        digitalWrite(stepPins[i], HIGH); //moves by 1 step
+        delay(250);
+        digitalWrite(stepPins[i], LOW)
         pos[i]++;
         if(pos[i] >= steps_per_rev)
         {

@@ -5,6 +5,7 @@
 
 displayTime()
 {
+  digitalWrite(enablePin, LOW);
 
   hour1 = '0'+(hours/10);   //Converts numbers to their ascii value
   hour2 = '0'+(hours%10);
@@ -53,7 +54,8 @@ displayTime()
     {
       if(posIndicator[i]!=1)
       {
-        s[i].step(1);
+        digitalWrite(stepPins[i], HIGH);
+        digitalWrite(stepPins[i], LOW);
         pos[i]++;
         if(pos[i] > (toMove[i]-2) && pos[i] < (toMove[i]+2))
         {
@@ -72,5 +74,6 @@ displayTime()
   }
 
   millisAtDisplayTime = millis();
+  digitalWrite(enablePin, HIGH);
   
 }

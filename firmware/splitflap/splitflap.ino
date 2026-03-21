@@ -16,13 +16,36 @@ int dayUpdate = 0;
 
 void setup() 
 {
+  for(int i = 0; i < 7; i++)
+  {
+    pinMode(stepPins[i], OUTPUT);
+    pinMode(dirPins[i], OUTPUT);
+  }
+
+  pinMode(enablePin, OUTPUT);
+  pinMode(sleepPin, OUTPUT);
+
+  digitalWrite(enablePin, HIGH); // disabled
+  digitalWrite(sleepPin, HIGH); // awake
+
   setupCalibration();
   wifiConnect();
   getTime();
   displayDayInfo();
-  delay(10000);
+
+  digitalWrite(sleepPin, LOW);
+  delay(20000);
+  digitalWrite(sleepPin, HIGH);
+
   displayWeekDay();
+
+  digitalWrite(sleepPin, LOW);
+  delay(20000);
+  digitalWrite(sleepPin, HIGH);
+
   displayTime();
+
+  digitalWrite(sleepPin, LOW); // sleep (no current passes)
 
   server.on("/", handleRoot);
   server.on("/time/now", handleTimeNow);
@@ -46,12 +69,18 @@ void loop()
 {
   timeCalculation();
   if(minute4 == 0 && dayUpdate == 0)
-  {
+  { 
+    digitalWrite(sleepPin, HIGH);
     displayDayInfo();
+    digitalWrite(sleepPin, LOW);
     delay(10000);
+    digitalWrite(sleepPin, HIGH);
     displayWeekDay();
+    digitalWrite(sleepPin, LOW);
     delay(5000);
+    digitalWrite(sleepPin, HIGH);
     displayWeather()
+    digitalWrite(sleepPin, LOW);
     dayUpdate++;
   }
   else if(minute4 != 0 && dayUpdate == 1)

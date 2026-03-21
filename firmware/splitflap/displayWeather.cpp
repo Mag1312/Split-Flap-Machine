@@ -54,7 +54,8 @@ void displayWeather()
         {
           if(posIndicator[i]!=1)
           {
-            s[i].step(1);
+            digitalWrite(stepPins[i], HIGH);
+            digitalWrite(stepPins[i], LOW);
             pos[i]++;
             if(pos[i] >= steps_per_rev)
             {
